@@ -10,11 +10,12 @@ public class RemoveDuplicatesfromSortedListII {
         ListNode cur = head;
         ListNode dummy = new ListNode(0);
         ListNode node = dummy;
-
+        //记录所有节点出现的次数
         while(cur != null){
             map.put(cur.val, map.getOrDefault(cur.val, 0) + 1);
             cur = cur.next;
         }
+        //出现一次的拿出来组成新链表
         while(head != null){
             if(map.get(head.val) == 1){
                 node.next = new ListNode(head.val);

@@ -7,7 +7,7 @@ public class InsertSortedCircularLinkedList {
             node.next = node;
             return node;
         }
-        // 顺着 head  往下找，先找到最小值的位置
+        // 顺着头往下找，先找到最小值的位置
         Node cur = head;
         while (cur.val <= cur.next.val && cur.next != head) {
             cur = cur.next;
