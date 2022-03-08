@@ -29,9 +29,9 @@ public class QuickSort {
         int more = R;// 一开始的>区左边界
         while (L < more) { // 当前数和>区没重合的时候
             if (arr[L] < arr[R]) {// L是当前数，为嘛是L呢，就相当于这个数组从第一个开始撸嘛
-                swap(arr,++less, L++);// <区的下一个数和L交换，然后L再++
+                swap(arr,++less, L++);// <区的下一个数和L交换，左区右扩，然后L再++
             } else if (arr[L] > arr[R]) {
-                swap(arr, --more, L);
+                swap(arr, --more, L);// 当前数和>区的前一个数做交换，右区左扩，然后L不变
             } else {
                 L++;
             }
