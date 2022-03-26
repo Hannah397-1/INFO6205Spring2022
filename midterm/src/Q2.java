@@ -18,6 +18,8 @@ public class Q2 {
 
             cur.next = new ListNode(sum);
             cur = cur.next;
+            if(c1 != null) c1= c1.next;
+            if(c2 != null) c2 = c2.next;
         }
         if(carry == 1){
             cur.next = new ListNode(1);
